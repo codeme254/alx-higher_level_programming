@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-print("ABCDEFGHIJKLMNOPQRSTUVWXYZ", end="")
-print("")
+__import__("os").write(1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ\n".encode("UTF-8"))
