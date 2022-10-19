@@ -59,7 +59,7 @@ class Rectangle:
         height = self.__height
         area_string = ""
         if width == 0 or height == 0:
-            print("")
+            return ("")
         for i in range(1, height+1):
             for j in range(1, width+1):
                 area_string += "#"
