@@ -1,0 +1,36 @@
+This file will be used to test the add_integer function
+The lines that will be run are the lines starting with '>>>'
+python3 -m doctest -v ./tests/0-add_integer.txt | tail -2
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(2, 98)
+100
+
+If one of the arguements is a float, it should be converted to an integer, then we raise a TypeError exception.
+>>> add_integer(2, "python")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+If a is also not an integer or a float, we raise the same TypeError exception
+>>> add_integer("python", 45)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+the inputs should be converted to an integer when they are fed in as floats
+>>> add_integer(10.6, 1.6)
+11
+
+>>> add_integer(11, 5)
+16
+
+one of the inputs can be 0
+>>> add_integer(11, 0)
+11
+
+negative numbers are also allowed
+>>> add_integer(12, -12)
+0
+
+both inputs can be 0
+>>> add_integer(0, 0)
+0
