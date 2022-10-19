@@ -64,4 +64,5 @@ class Rectangle:
             for j in range(1, width+1):
                 area_string += "#"
             area_string += "\n"
-        return area_string
+        # using the strip method to remove the extra new line
+        return area_string.strip()
