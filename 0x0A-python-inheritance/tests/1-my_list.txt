@@ -1,4 +1,3 @@
-The module should have a docstring, checking for the docstring
 To run this test file, use the command below
 
 python3 -m doctest modulename -v
