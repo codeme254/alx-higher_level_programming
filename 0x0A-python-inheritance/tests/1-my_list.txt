@@ -1,0 +1,55 @@
+The module should have a docstring, checking for the docstring
+To run this test file, use the command below
+
+python3 -m doctest modulename -v
+This command is likely to bring a lot of text in your terminal
+You can view the last 5 important lines using the command below
+python3 -m doctest tests/1-my_list.txt -v | tail -n 5
+
+Module should have a documentation
+>>> module = __import__("1-my_list").__doc__
+>>> len(module) > 1
+True
+
+The class should have a documentation
+>>> classdocstring = __import__("1-my_list").MyList.__doc__
+>>> len(classdocstring) > 1
+True
+
+All entries are integers
+    >>> MyList = __import__("1-my_list").MyList
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Negative numbers will be sorted to
+>>> another_list = MyList()
+>>> another_list.append(-2)
+>>> another_list.append(-3)
+>>> another_list.append(-5)
+>>> another_list.append(-1)
+>>> another_list.append(-10)
+>>> print(another_list)
+[-2, -3, -5, -1, -10]
+>>> another_list.print_sorted()
+[-10, -5, -3, -2, -1]
+>>> print(another_list)
+[-2, -3, -5, -1, -10]
+
+Empty list will return an empty list
+>>> empty_list = MyList()
+>>> print(empty_list)
+[]
+>>> empty_list.print_sorted()
+[]
+>>> print(empty_list)
+[]
