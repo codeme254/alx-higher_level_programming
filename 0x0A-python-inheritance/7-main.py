@@ -5,7 +5,6 @@ bg = BaseGeometry()
 
 bg.integer_validator("my_int", 12)
 bg.integer_validator("width", 89)
-bg.integer_validator("height", "string")
 
 try:
     bg.integer_validator("name", "John")
