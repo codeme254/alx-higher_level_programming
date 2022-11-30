@@ -14,3 +14,4 @@ CREATE TABLE IF NOT EXISTS `hbtn_0d_usa`.`cities`(
     PRIMARY KEY(`id`),
     FOREIGN KEY(`state_id`) REFERENCES `hbtn_0d_usa`.`states`(`id`)
 );
+
